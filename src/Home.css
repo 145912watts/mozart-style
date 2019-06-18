@@ -542,7 +542,7 @@ tr {
     cursor: pointer;
     float: left;
     font-size: 32px;
-    margin-left: 60px;
+    margin-left: 20%;
 }
 
 .navList {
