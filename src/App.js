@@ -1,26 +1,79 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import './Home.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Header from "./Header";
+import Homepage from "./Homepage";
+import Menu from "./Menu";
+import Contract from "./Contract";
+
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      menuOpen: false,
+      homeMode: true,
+      contractMode: false
+    }
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(e) {
+    if(
+      e.target.id === "menu-logo-search-span-column-left-burger"
+      ||
+      e.target.id === "menuContainer-close-icon"
+      ) {
+      this.setState({
+        menuOpen: !this.state.menuOpen
+      })
+    } else {
+      if(this.state.menuOpen) {
+        this.setState({
+          menuOpen: false
+        })
+      }
+    }
+  }
+  
+  componentDidMount() {
+    window.addEventListener('click', this.handleClick);
+  }
+  
+  componentWillUnmount() {
+    window.removeEventListener('click', this.handleClick);
+  }
+
+  getHomePage() {
+    return (
+      <Homepage />
+    );
+  }
+
+  render() {
+    let centerColumnWidth;
+    window.screen.width > 1024 ? centerColumnWidth = window.screen.width * 0.855 : centerColumnWidth = 1024;
+    
+    // console.log(centerColumnWidth);
+
+    return (
+      <Router>
+        <div className="App">
+          <div className="App-Center-Column" style={{width: centerColumnWidth}}>
+            <Menu 
+              open={this.state.menuOpen}
+            />
+            <Header 
+            menuOpen={this.state.menuOpen}/>
+            <Route path="/" exact component={Homepage} />
+            <Route path="/contract" exact component={Contract} />
+          </div>
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;
