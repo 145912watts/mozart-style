@@ -5,31 +5,44 @@ import './postReset.css';
 */
 import './Home.css';
 import './App.css';
-
+/*
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "./Header";
 import Homepage from "./Homepage";
 import Menu from "./Menu";
+*/
 import Contract from "./Contract";
-
-import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      menuOpen: false,
-      homeMode: true,
-      contractMode: false
+      // menuOpen: false,
+      // homeMode: true,
+      // contractMode: false
     }
-    this.handleClick = this.handleClick.bind(this);
+    // this.handleClick = this.handleClick.bind(this);
   }
 
+  render() {
+    let centerColumnWidth;
+    window.screen.width > 1024 ? centerColumnWidth = window.screen.width * 0.855 : centerColumnWidth = 1024;
+    return (
+      <div className="App">
+        <div className="App-Center-Column" style={{width: centerColumnWidth}}>
+          <Contract />
+        </div>
+      </div>
+    );
+  }
+  /*
+
   handleClick(e) {
-    if(
+    if (
       e.target.id === "menu-logo-search-span-column-left-burger"
       ||
       e.target.id === "menuContainer-close-icon"
-      ) {
+    ) {
       this.setState({
         menuOpen: !this.state.menuOpen
       })
@@ -41,7 +54,7 @@ class App extends React.Component {
       }
     }
   }
-  
+
   componentDidMount() {
     window.addEventListener('click', this.handleClick);
   }
@@ -49,7 +62,7 @@ class App extends React.Component {
   componentWillUnmount() {
     window.removeEventListener('click', this.handleClick);
   }
-  
+
   render() {
     let centerColumnWidth;
     window.screen.width > 1024 ? centerColumnWidth = window.screen.width * 0.855 : centerColumnWidth = 1024;
@@ -72,6 +85,7 @@ class App extends React.Component {
       </Router>
     );
   }
+  */
 }
 
 export default App;
