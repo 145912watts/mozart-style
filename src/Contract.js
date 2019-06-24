@@ -3,7 +3,12 @@ import React from 'react';
 import Service from "./Service";
 import ContractOwnerPanel from "./ContractOwnerPanel";
 
-import "./Contract.css"
+import "./Contract.css";
+
+import profileImage1 from "./images/profile-images/profile-image-placeholder1.png";
+import profileImage2 from "./images/profile-images/profile-image-placeholder2.png";
+import profileImage3 from "./images/profile-images/profile-image-placeholder3.png";
+import profileImage4 from "./images/profile-images/profile-image-placeholder4.png";
 
 const serviceDummyData = {
     attachments: ["Lorem-Ipsum-Dolor-Sit-Amet.Pdf"],
@@ -22,6 +27,41 @@ const serviceDummyData = {
     totalValue: "£XXX XXX",
     ytdMeasure: "Lorem Ipsum",
 }
+
+const contractOwnerPanelListDummyData = [
+    {
+        dateCreated: "00/00/00",
+        dateModified: "00/00/00",
+        id: "1",
+        image: profileImage1,
+        name: "Lorem Ipsum",
+        title: "Lorem Ipsum Dolor Sit Amet",
+    },
+    {
+        dateCreated: "00/00/00",
+        dateModified: "00/00/00",
+        id: "2",
+        image: profileImage2,
+        name: "Lorem Ipsum",
+        title: "Lorem Ipsum Dolor Sit Amet",
+    },
+    {
+        dateCreated: "00/00/00",
+        dateModified: "00/00/00",
+        id: "3",
+        image: profileImage3,
+        name: "Lorem Ipsum",
+        title: "Lorem Ipsum Dolor Sit Amet",
+    },
+    {
+        dateCreated: "00/00/00",
+        dateModified: "00/00/00",
+        id: "4",
+        image: profileImage4,
+        name: "Lorem Ipsum",
+        title: "Lorem Ipsum Dolor Sit Amet",
+    },
+]
 
 class Contract extends React.Component {
 
@@ -150,7 +190,9 @@ class Contract extends React.Component {
             <div className="App-body">
                 <div className="contract-page">
                     <div className="contract-page-upper" style={{height: contractPageUpperHeight}}>
-                        <ContractOwnerPanel />
+                        <ContractOwnerPanel 
+                            owners={contractOwnerPanelListDummyData}
+                        />
                         {this.getContractUpperMiddleColumn()}
                         {this.getContractUpperRightColumn()}
                     </div>

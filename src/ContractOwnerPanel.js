@@ -1,5 +1,4 @@
 import React from 'react';
-import profileImage from "./images/profile-image-placeholder.png";
 
 import Slider from "react-slick";
 
@@ -11,66 +10,67 @@ class ContractOwnerPanel extends React.Component {
         super(props);
 
         this.state = {
-            listView: false,
-        }
+            listView: true,
+            slideIndex: 0,
+        };
 
         this.getListView = this.getListView.bind(this);
         this.handleListViewClick = this.handleListViewClick.bind(this);
-        this.handleClick = this.handleClick.bind(this);
     }
 
-    getIndividualContractOwnerInfo() {
+    getIndividualContractOwnerInfo(owner, i) {
         return (
-            <div className="contract-page-upper-column-content" id="contract-page-upper-column-content-profile-image">
-                <img alt="Profle" className="contract-page-upper-column-content-profile-image" src={profileImage} style={{display: "inline"}}/>
+            <div className="contract-page-upper-column-content" id="contract-page-upper-column-content-profile-image" key={i}>
+                <img alt="Profle" className="contract-page-upper-column-content-profile-image" src={owner.image} style={{display: "inline"}}/>
                 <i className="material-icons" id="contract-page-upper-column-content-image-edit">
                     edit
                 </i>
                 <div className="contract-page-upper-column-left-info" id="contract-page-upper-column-left-info-top">
                     <div className="contract-page-upper-column-left-info-top-name">
-                        <p>NAME:</p>
-                        <p>Lorem Ipsum</p>
+                        <p className="contract-page-upper-column-left-info-top-name-paragraph">NAME:</p>
+                        <p className="contract-page-upper-column-left-info-top-name-paragraph">{owner.name}</p>
                     </div>
                     <div className="contract-page-upper-column-left-info-top-job-title">
-                        <p>JOB TITLE:</p>
-                        <p>Lorem Ipsum Dolor Sit Amet</p>
+                        <p className="contract-page-upper-column-left-info-top-job-title-paragraph">JOB TITLE:</p>
+                        <p className="contract-page-upper-column-left-info-top-job-title-paragraph">{owner.title}</p>
                     </div>
                 </div>
                 <div className="contract-page-upper-column-left-info" id="contract-page-upper-column-left-info-bottom">
                     <div className="contract-page-upper-column-left-info-bottom-dates">
-                        <i className="material-icons">
+                        <i className="material-icons" id="contract-page-upper-column-left-info-bottom-dates-icon">
                             date_range
                         </i>
-                        <p>CREATED:</p>
-                        <p>00/00/00</p>
+                        <p className="contract-page-upper-column-left-info-bottom-dates-paragraph">CREATED:</p>
+                        <p className="contract-page-upper-column-left-info-bottom-dates-paragraph">{owner.dateCreated}</p>
                     </div>
                     <div className="contract-page-upper-column-left-info-bottom-dates" id="contract-page-upper-column-left-info-bottom-dates-right">
-                        <i className="material-icons">
+                        <i className="material-icons" id="contract-page-upper-column-left-info-bottom-dates-icon">
                             date_range
                         </i>
-                        <p>MODIFIED:</p>
-                        <p>00/00/00</p>
+                        <p className="contract-page-upper-column-left-info-bottom-dates-paragraph">MODIFIED:</p>
+                        <p className="contract-page-upper-column-left-info-bottom-dates-paragraph">{owner.dateModified}</p>
                     </div>
                 </div>
             </div>    
         );
     }
 
-    handleListViewClick() {
+    handleListViewClick(e, i) {
+        this.slider.slickGoTo(e.target.getAttribute('data-key'), true);
         this.setState({
             listView: !this.state.listView,
         })
     }
 
-    getContractOwnerListItem() {
+    getContractOwnerListItem(owner, i) {
         return (
-            <li className="contract-owner-list-item">
-                <div className="contract-owner-list-container-contract-details-container">
-                    <h5>Lorem Ipsum</h5>
-                    <p>Lorem Ipsum Dolor Sit Amet</p>
+            <li className="contract-owner-list-item" onClick={this.handleListViewClick} data-key={i} key={i}>
+                <div className="contract-owner-list-container-contract-details-container" data-key={i} onClick={this.handleListViewClick}>
+                    <h5 data-key={i} onClick={this.handleListViewClick}>{owner.name}</h5>
+                    <p className="contract-owner-list-container-contract-details-container-paragraph" data-key={i} onClick={this.handleListViewClick}>{owner.title}</p>
                 </div>
-                <div className="contract-owner-list-container-contract-image-container">
-                    <img alt="Profle" className="contract-page-upper-column-content-profile-image" id="contract-owner-list-image" src={profileImage}/>
+                <div className="contract-owner-list-container-contract-image-container" data-key={i} onClick={this.handleListViewClick}>
+                    <img alt="Profle" className="contract-page-upper-column-content-profile-image" id="contract-owner-list-image" data-key={i} onClick={this.handleListViewClick} src={owner.image}/>
                 </div>
             </li>
         );
@@ -98,10 +98,11 @@ class ContractOwnerPanel extends React.Component {
         return (
             <div className="contract-owner-list-container" style={listViewStyle}>
                 <ul>
-                    {this.getContractOwnerListItem()}
-                    {this.getContractOwnerListItem()}
-                    {this.getContractOwnerListItem()}
-                    {this.getContractOwnerListItem()}
+                    {
+                        this.props.owners.map((owner, i) => {
+                            return this.getContractOwnerListItem(owner, i);
+                        })
+                    }
                 </ul>
             </div>
         );
@@ -112,9 +113,10 @@ class ContractOwnerPanel extends React.Component {
         const settings = {
             dots: false,
             infinite: true,
-            speed: 500,
+            initialSlide: 1,
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            speed: 500,
         };
 
         let sliderStyle = {
@@ -126,11 +128,12 @@ class ContractOwnerPanel extends React.Component {
 
         return (
             <div style={sliderStyle}>
-                <Slider {...settings}>
-                    {this.getIndividualContractOwnerInfo()}
-                    {this.getIndividualContractOwnerInfo()}
-                    {this.getIndividualContractOwnerInfo()}
-                    {this.getIndividualContractOwnerInfo()}
+                <Slider ref={slider => (this.slider = slider)} {...settings}>
+                    {
+                        this.props.owners.map((owner, i) => {
+                            return this.getIndividualContractOwnerInfo(owner, i);
+                        })
+                    }
                 </Slider>
             </div>
         );
@@ -152,24 +155,6 @@ class ContractOwnerPanel extends React.Component {
                 {listView}
             </div>
         );
-    }
-
-    handleClick(e) {
-        if (e.target.id !== "list-view-icon") {
-            if (this.state.listView) {
-                this.setState({
-                    listView: !this.state.listView,
-                })
-            }
-        }
-    }
-
-    componentDidMount() {
-        window.addEventListener('click', this.handleClick);
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('click', this.handleClick);
     }
 
     render() {
