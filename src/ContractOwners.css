@@ -1,0 +1,194 @@
+#contract-page-upper-column-left {
+    vertical-align: top;
+}
+
+#contract-page-upper-column-left {
+    background-color: #f90628;
+    width: 18%;
+}
+
+.contract-page-upper-column-content-profile-image {
+    border-radius: 50%;
+    margin-left: 0px;
+    margin-top: 9%;
+    width: 75%;
+}
+
+#contract-page-upper-column-content-image-edit {
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: -14px;
+}
+
+#contract-page-upper-column-content-image-edit:hover {
+    color: #ebebeb;
+    transition: color 0.15s;
+}
+
+.contract-page-upper-column-left-info p {
+    color: white;
+    font-size: 0.75em;
+    font-weight: bold;
+    margin-left: 14%;
+    text-align: left;
+}
+
+.contract-page-upper-column-left-info-top-name {
+    margin-bottom: 8%;
+    margin-top: 10%;
+}
+
+#contract-page-upper-column-left-info-bottom {
+    margin-top: 10%;
+}
+
+.contract-page-upper-column-left-info-bottom-dates {
+    display: inline-block;
+    overflow: hidden;
+    width: 50%;
+}
+
+.contract-page-upper-column-left-info-bottom-dates i {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 6px;
+    margin-left: 27%;
+    width: fit-content;
+}
+
+.contract-page-upper-column-left-info-bottom-dates p {
+    color: #242424;
+    display: block;
+    font-size: 9px;
+    margin-left: 28%;
+}
+
+#contract-page-upper-column-left-info-bottom-dates-right p,
+#contract-page-upper-column-left-info-bottom-dates-right i {
+    margin-left: 0px;
+}
+
+.contract-owner-list-container {
+    background-color: lightblue;
+    height: inherit;
+    overflow: hidden;
+    width: inherit;
+}
+
+.contract-owner-list-container {
+    transition: margin 0.75s;
+}
+
+.contract-owner-list-container ul {
+    height: 100%;
+    margin-top: 10%;
+    padding: 0;
+    width: 100%;
+}
+
+.contract-owner-list-container ul li {
+    /*background-color: white;*/
+    cursor: pointer;
+    height: 17%;
+    list-style: none;
+    margin-bottom: 7%;
+    margin-top: 5px;
+    overflow: hidden;
+    padding: 0;
+    transition: background-color 0.4s;
+}
+
+.contract-owner-list-container ul li:hover {
+   background-color: #f90628;
+}
+
+.contract-owner-list-container ul li p,
+.contract-owner-list-container ul li img {
+    display: inline;
+}
+
+.contract-owner-list-container ul li h5 {
+    color: white;
+    font-size: 1em;
+    margin-left: 24%;
+    text-align: left;
+}
+
+.contract-owner-list-container ul li p {
+    color: white;
+    float: left;
+    font-size: 0.70em;
+    margin-left: 24%;
+    margin-top: 0;
+    text-align: left;
+}
+
+#contract-owner-list-image {
+    float: right;
+    margin-bottom: -35%;
+    margin-right: 15.5%;
+    margin-top: 2.5%;
+    width: 55%;
+}
+
+#contract-page-upper-column-header-left h4 {
+    color: white;
+}
+
+#contract-page-upper-column-header-left {
+    /*background-color: #f90628;*/
+    background-color: #2b2b2b;
+}
+
+#contract-page-upper-column-header-left i {
+    color: white;
+    font-size: 1.4em;
+    margin-top: 11%;
+}
+
+#contract-page-upper-column-header-left i:hover {
+    color: #f90628;
+    transition: color 0.15s;
+};
+
+.slick-dots {
+    margin-bottom: -6px;
+}
+
+.slick-arrow {
+    margin-top: 93%;
+    z-index: 100;
+}
+
+.slick-prev {
+    left: 8px;
+}
+
+.slick-next {
+    right: 8px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #2b2b2b;
+  font-size: 16px;
+  opacity: 1;
+}
+
+.sliderStyle {
+    transition: margin 0.75s;
+}
+
+.contract-owner-list-container-contract-details-container {
+    display: inline-block;
+    width: 50%;
+}
+
+.contract-owner-list-container-contract-image-container {
+    display: inline-block;
+    width: 50%;
+}
+
+.contract-owner-list-container ul li div {
+    margin-top: 2.5%;
+}

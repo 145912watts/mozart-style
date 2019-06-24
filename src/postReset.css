@@ -1,0 +1,12 @@
+.contract-page-upper-column-content-form-container-lower-left-content p {
+    margin-left: -16px;
+}
+
+#main-table-filters-menu-dropdown-filter-one, #main-table-filters-menu-dropdown-filter-two, #main-table-filters-menu-dropdown-filter-three, #main-table-filters-menu-dropdown-filter-four {
+    width: 17%;
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}

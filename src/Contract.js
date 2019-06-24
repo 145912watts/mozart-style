@@ -1,9 +1,9 @@
 import React from 'react';
-import profileImage from "./images/profile-image-placeholder.png";
 
 import "./ContractTEST.css"
 
 import Service from "./Service";
+import ContractOwnerPanel from "./ContractOwnerPanel";
 
 const serviceDummyData = {
     attachments: ["Lorem-Ipsum-Dolor-Sit-Amet.Pdf"],
@@ -26,45 +26,7 @@ const serviceDummyData = {
 class Contract extends React.Component {
 
     getContractUpperLeftColumn() {
-        return (
-            <div className="contract-page-upper-column" id="contract-page-upper-column-left">
-                <div className="contract-page-upper-column-header" id="contract-page-upper-column-header-left">
-                    <h5>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT​​​​​​</h5>
-                </div>
-                <div className="contract-page-upper-column-content" id="contract-page-upper-column-content-profile-image">
-                    <img alt="Profle" className="contract-page-upper-column-content-profile-image" src={profileImage}/>
-                    <i className="material-icons" id="contract-page-upper-column-content-image-edit">
-                        edit
-                    </i>
-                    <div className="contract-page-upper-column-left-info" id="contract-page-upper-column-left-info-top">
-                        <div className="contract-page-upper-column-left-info-top-name">
-                            <p>NAME:</p>
-                            <p>Lorem Ipsum</p>
-                        </div>
-                        <div className="contract-page-upper-column-left-info-top-job-title">
-                            <p>JOB TITLE:</p>
-                            <p>Lorem Ipsum Dolor Sit Amet</p>
-                        </div>
-                    </div>
-                    <div className="contract-page-upper-column-left-info" id="contract-page-upper-column-left-info-bottom">
-                        <div className="contract-page-upper-column-left-info-bottom-dates">
-                            <i className="material-icons">
-                                date_range
-                            </i>
-                            <p>CREATED:</p>
-                            <p>00/00/00</p>
-                        </div>
-                        <div className="contract-page-upper-column-left-info-bottom-dates" id="contract-page-upper-column-left-info-bottom-dates-right">
-                            <i className="material-icons">
-                                date_range
-                            </i>
-                            <p>MODIFIED:</p>
-                            <p>00/00/00</p>
-                        </div>
-                    </div>
-                </div>
-            </div>            
-        );
+        return <ContractOwnerPanel />
     };
 
     getContractUpperMiddleColumn() {
@@ -181,6 +143,8 @@ class Contract extends React.Component {
     
     render() {
 
+        const contractPageUpperHeight = window.screen.height * 0.61;
+
         const services = [
             "one",
             "two"
@@ -200,7 +164,7 @@ class Contract extends React.Component {
         return (
             <div className="App-body">
                 <div className="contract-page">
-                    <div className="contract-page-upper">
+                    <div className="contract-page-upper" style={{height: contractPageUpperHeight}}>
                             {this.getContractUpperLeftColumn()}
                             {this.getContractUpperMiddleColumn()}
                             {this.getContractUpperRightColumn()}

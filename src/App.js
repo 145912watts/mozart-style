@@ -1,6 +1,10 @@
 import React from 'react';
-import './App.css';
+/*
+import "./reset.css";
+import './postReset.css';
+*/
 import './Home.css';
+import './App.css';
 
 import Header from "./Header";
 import Homepage from "./Homepage";
@@ -56,13 +60,16 @@ class App extends React.Component {
     let centerColumnWidth;
     window.screen.width > 1024 ? centerColumnWidth = window.screen.width * 0.855 : centerColumnWidth = 1024;
     
-    // console.log(centerColumnWidth);
+    console.log(centerColumnWidth);
+
+    
 
     return (
       <Router>
         <div className="App">
           <div className="App-Center-Column" style={{width: centerColumnWidth}}>
-            <Menu 
+            <Menu
+              centerColumnWidth={centerColumnWidth}
               open={this.state.menuOpen}
             />
             <Header 

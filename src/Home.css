@@ -63,7 +63,7 @@ a, a:visited, a:hover, a:active {
     cursor: pointer;
     height: 81%;
     opacity: 0.4;
-    transition: opacity 0.55s;
+    transition: opacity 0.75s;
 }
 
 .header-span-dan-hero-message-container {
@@ -180,6 +180,15 @@ a, a:visited, a:hover, a:active {
     transition-delay: 0.1s;
   }
 
+  #menu-logo-search-span-column-left-burger {
+    position: fixed;
+    float: left;
+    margin-left: -12.5%;
+    margin-top: 0;
+    margin-bottom: 0;
+    top: 23%;
+  }
+
   #menuContainer-close-icon:hover {
       color: #f90628;
       transform: rotate(180deg);
@@ -253,13 +262,14 @@ a, a:visited, a:hover, a:active {
     border-color: #2a2a2a;
     border-radius: 50px;
     cursor: pointer;
-    font-size: 9px;
+    font-size: 0.57em;
     font-weight: bolder;
     height: 36px;
     margin: 0 1.8%;
     text-transform: uppercase;
     transition: all 0.25s ease-in-out;
-    width: 180px;
+    min-width: 91px;
+    width: 13%;
 }
 
 .filter-buttons:focus {
@@ -514,7 +524,8 @@ tr {
     color: white;
     height: 100vh;
     position: fixed;
-    width: 303px;
+    /*width: 303px;*/
+    /*width: 18%;*/
     z-index: 5000;
     transition: width 0.06s cubic-bezier(0.075, 0.82, 0.165, 1);
     /*transition: width 1.06s cubic-bezier(0.075, 0.82, 0.165, 1);*/
@@ -590,6 +601,7 @@ tr {
 
 .contract-page-upper {
     height: 67vh;
+    overflow: hidden;
 }
 
 .contract-page-upper-column {
@@ -639,15 +651,19 @@ tr {
 
 .contract-page-upper-column-header h4 {
     float: left;
-    font-size: 12px;
+    font-size: 0.75em;
     font-weight: 600;
     margin-left: 32px;
     margin-top: 32px;
 }
 
+#contract-page-upper-column-header-left h4 {
+    color: white;
+}
+
 .contract-page-upper-column-header h5 {
     float: left;
-    font-size: 9px;
+    font-size: 0.57em;
     font-weight: 600;
     margin-left: 32px;
     margin-top: 37px;
@@ -669,7 +685,8 @@ tr {
 }
 
 #contract-page-upper-column-header-left {
-    background-color: #f90628;
+    /*background-color: #f90628;*/
+    background-color: #2b2b2b;
 }
 
 .contract-page-upper-column-content-form-container-upper {
@@ -717,7 +734,7 @@ tr {
 
 .contract-page-upper-column-content-form-container-upper-item p {
     display: inline-block;
-    font-size: 12px;
+    font-size: 0.75em;
 }
 
 .contract-page-upper-column-content-form-container-upper-item-key {
@@ -754,7 +771,7 @@ tr {
 
 .contract-page-upper-column-content-form-container-lower-left p {
     float: left;
-    font-size: 12px;
+    font-size: 0.75em;
     font-weight: bold;
     margin-left: 12px;
     padding-top: 2px;
@@ -830,7 +847,7 @@ tr {
 }
 
 .contract-page-upper-right-column-content h4 {
-    font-size: 12px;
+    font-size: 0.75em;
     font-weight: bold;
     margin: 13% auto 0 auto;
     margin-left: 32px;
@@ -839,7 +856,7 @@ tr {
 
 .contract-page-upper-right-column-content p {
     color: #c5c5c5;
-    font-size: 12px;
+    font-size: 0.75em;
     font-weight: bold;
     margin: 10.5% auto;
     margin-left: 32px;
@@ -853,17 +870,11 @@ tr {
     transition: color 0.45s;
 }
 
-.contract-page-upper-column-content-profile-image {
-    border-radius: 50%;
-    margin-top: 9%;
-    width: 75%;
-}
-
 .contract-page-upper-column-left-info p {
     color: white;
-    font-size: 12px;
+    font-size: 0.75em;
     font-weight: bold;
-    margin-left: 32px;
+    margin-left: 14%;
     text-align: left;
 }
 
@@ -902,7 +913,7 @@ tr {
     display: block;
     font-size: 18px;
     margin-bottom: 6px;
-    margin-left: 30px;
+    margin-left: 27%;
     width: fit-content;
 }
 
@@ -910,6 +921,7 @@ tr {
     color: #242424;
     display: block;
     font-size: 9px;
+    margin-left: 28%;
 }
 
 #contract-page-upper-column-left-info-bottom-dates-right p,
@@ -970,7 +982,7 @@ tr {
     cursor: pointer;
     float: left;
     font-size: 14px;
-    /*margin-top: 1.5%;*/
+    margin-top: 0.3%;
     margin-left: -15%;
 }
 
@@ -1047,7 +1059,7 @@ tr {
 }
 
 #collapsibleContainerContentColumnDivider-left p {
-    font-size: 12px;
+    font-size: 0.75em;
     font-weight: bold;
     margin-left: 11%;
     text-transform: uppercase;
@@ -1081,4 +1093,82 @@ tr {
 
 #collapsibleContainerContentColumnRight {
     vertical-align: top;
+}
+
+#service-container-header-column-down-arrow-icon {
+    transition: 0.4s;
+}
+
+
+
+
+
+
+.slick-slide img {
+    display: inline;
+}
+
+.slick-dots {
+    margin-bottom: -6px;
+}
+
+.slick-arrow {
+    margin-top: 93%;
+    z-index: 100;
+}
+
+.slick-prev {
+    left: 8px;
+}
+
+.slick-next {
+    right: 8px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #2b2b2b;
+  font-size: 16px;
+  opacity: 1;
+}
+
+#contract-page-upper-column-header-left i {
+    color: white;
+    font-size: 1.4em;
+    margin-top: 11%;
+}
+
+#contract-page-upper-column-header-left i:hover {
+    color: #f90628;
+    transition: color 0.15s;
+};
+
+.contract-owner-list-container {
+    background-color: lightblue;
+    height: inherit;
+    overflow: hidden;
+    width: inherit;
+}
+
+.contract-owner-list-container {
+    transition: margin 0.75s;
+}
+
+.contract-owner-list-container ul {
+    height: 100%;
+    margin-top: 10%;
+    padding: 0;
+    width: 100%;
+}
+/*
+.contract-owner-list-container ul li {
+    background-color: white;
+    margin-top: 5px;
+    height: 17%;
+    list-style: none;
+    padding: 0;
+}
+*/
+.sliderStyle {
+    transition: margin 0.75s;
 }

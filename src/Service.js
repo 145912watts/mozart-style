@@ -1,6 +1,14 @@
 import React from 'react';
 import Collapsible from 'react-collapsible';
 
+const collapsibleArrowOpenStyle = {
+    transform: "rotate(180deg)"
+}
+/*
+const collapsibleArrowClosedStyle = {
+
+}
+*/
 class Service extends React.Component {
 
     constructor(props) {
@@ -41,7 +49,18 @@ class Service extends React.Component {
         );
     }
 
+
+
     getServiceContainerHeader() {
+
+        console.log(this.state.open);
+
+        let arrowStyle;
+
+        this.state.open ? arrowStyle = collapsibleArrowOpenStyle : arrowStyle = null;
+
+
+
         return(
             <div className="serviceContainerHeader">
                 <div className="serviceContainerHeaderTitlesContainer">
@@ -67,39 +86,10 @@ class Service extends React.Component {
                         <i className="material-icons" id="service-container-header-column-edit-icon">
                             edit
                         </i>
-                        <i className="material-icons" id="service-container-header-column-down-arrow-icon" onClick={this.handleClick}>
+                        <i className="material-icons" id="service-container-header-column-down-arrow-icon" style={arrowStyle}>
                             keyboard_arrow_down
                         </i>
                     </div>
-                </div>
-            </div>
-        );
-    }
-
-    getServiceCollapsibleContentBUG() {
-        console.log(this.props.data);
-        return(
-            <div className="collapsibleContainerContent">
-                <div className="collapsibleContainerContentColumn" id="collapsibleContainerContentColumnLeft">
-                    {this.getServiceTableItem("SERVICE STATUS", this.props.data.serviceStatus)}
-                    {this.getServiceTableItem("DELIVERED VALUE", this.props.data.deliveredValue)}
-                    {this.getServiceTableItem("TOTAL VALUE", this.props.data.totalValue)}
-                    {this.getServiceTableItem("SERVICE OWNER", this.props.data.serviceOwner)}
-                    {this.getServiceTableItemDescriptionAttachment("SERVICE DESCRIPTION", this.props.data.serviceDescription)}
-                </div>
-                <div className="collapsibleContainerContentColumn" id="collapsibleContainerContentColumnMiddle">
-                    {this.getServiceTableItem("MEDIA TYPE", this.props.data.mediaType)}
-                    {this.getServiceTableItem("MARKET", this.props.data.market)}
-                    {this.getServiceTableItem("BRAND", this.props.data.brand)}
-                    {this.getServiceTableItem("REGION", this.props.data.region)}
-                    {this.getServiceTableItemDescriptionAttachment("MEASURE DESCRIPTION", this.props.data.measureDescription)}
-                </div>
-                <div className="collapsibleContainerContentColumn" id="collapsibleContainerContentColumnRight">
-                    {this.getServiceTableItem("REVENUE RECOGNITION", "value")}
-                    {this.getServiceTableItem("SERVICE DELIVERY METHOD", "value")}
-                    {this.getServiceTableItem("YTD MEASURE", "value")}
-                    {this.getServiceTableItem("MEDIA OWNER CONFIRMATION", "value")}
-                    {this.getServiceTableItemDescriptionAttachment("ATTACHMENTS", "value")}
                 </div>
             </div>
         );
@@ -141,8 +131,9 @@ class Service extends React.Component {
     }
 
     render() {
+        console.log(this.state.open);
        return (
-            <Collapsible className="serviceContainer" contentOuterClassName="serviceContentCollapsible" openedClassName="serviceContainer" transitionTime={150} trigger={this.getServiceContainerHeader()}>
+            <Collapsible className="serviceContainer" contentOuterClassName="serviceContentCollapsible" openedClassName="serviceContainer" transitionTime={300} trigger={this.getServiceContainerHeader()} onClosing={this.handleClick} onOpening={this.handleClick}>
                 {this.getServiceCollapsibleContent()}
             </Collapsible>
        );

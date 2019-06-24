@@ -3,15 +3,18 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class Menu extends React.Component {
     render() {
+        let menuWidth = this.props.centerColumnWidth * 0.21;
+        let navContainerMarginTop = window.screen.height * 0.27;
+
         if(this.props.open) {
             return (
-                <div className="menuContainer">
+                <div className="menuContainer" style={{width: menuWidth}}>
                     <div className="menuContainer-close-icon-container">
                         <i className="material-icons" id="menuContainer-close-icon">
                             close
                         </i>
                     </div>
-                    <div className="navContainer">
+                    <div className="navContainer" style={{marginTop: navContainerMarginTop}}>
                         <ul className="navList">
                             <li>
                                 <Link to="/">
