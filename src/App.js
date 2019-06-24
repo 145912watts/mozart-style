@@ -49,13 +49,7 @@ class App extends React.Component {
   componentWillUnmount() {
     window.removeEventListener('click', this.handleClick);
   }
-
-  getHomePage() {
-    return (
-      <Homepage />
-    );
-  }
-
+  
   render() {
     let centerColumnWidth;
     window.screen.width > 1024 ? centerColumnWidth = window.screen.width * 0.855 : centerColumnWidth = 1024;
@@ -69,7 +63,8 @@ class App extends React.Component {
               open={this.state.menuOpen}
             />
             <Header 
-            menuOpen={this.state.menuOpen}/>
+              menuOpen={this.state.menuOpen}
+            />
             <Route path="/" exact component={Homepage} />
             <Route path="/contract" exact component={Contract} />
           </div>
