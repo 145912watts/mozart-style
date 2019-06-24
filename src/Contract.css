@@ -1,0 +1,271 @@
+.contract-page {
+    min-height: 67vh;
+}
+
+.contract-page-upper {
+    height: 67vh;
+    overflow: hidden;
+}
+
+.contract-page-upper-column {
+    border-radius: 15px;
+    border-width: 0px;
+    border-color: rgb(102, 102, 102);
+    border-style: solid;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 50px 0px;
+    display: inline-block;
+    height: 85%;
+    margin: 0 auto;
+    /*margin-top: 3%;*/
+    margin-top: 43px;
+    overflow: hidden;
+}
+
+#contract-page-upper-column-left,
+#contract-page-upper-column-right {
+    vertical-align: top;
+}
+
+#contract-page-upper-column-middle {
+    background-color: white;
+    margin-left: 3.5%;
+    margin-right: 3.5%;
+    width: 43%;
+}
+
+#contract-page-upper-column-right {
+    background-color: white;
+    width: 26%;
+}
+
+.contract-page-lower {
+    height: fit-content;
+}
+
+.contract-page-upper-column-header {
+    background-color: #ebebeb;
+    height: 14%;
+}
+
+.contract-page-upper-column-header h4 {
+    float: left;
+    font-size: 0.75em;
+    font-weight: 600;
+    margin-left: 32px;
+    margin-top: 32px;
+}
+
+.contract-page-upper-column-header h5 {
+    float: left;
+    font-size: 0.57em;
+    font-weight: 600;
+    margin-left: 32px;
+    margin-top: 37px;
+    text-align: left;
+    width: 79%;
+}
+
+.contract-page-upper-column-header i {
+    cursor: pointer;
+    float: right;
+    font-size: 16px;
+    margin-right: 20px;
+    margin-top: 32px;
+}
+
+.contract-page-upper-column-header i:hover {
+    color: #f90628;
+    transition: color 0.15s;
+}
+
+.contract-page-upper-column-content-form-container-upper {
+    overflow: hidden;
+}
+
+.contract-page-upper-column-content-form-container-upper,
+.contract-page-upper-column-content-form-container-lower {
+    display: block;
+}
+
+.contract-page-upper-column-content-form-container-upper-left,
+.contract-page-upper-column-content-form-container-upper-right {
+    width: 49%;
+}
+
+.contract-page-upper-column-content-form-container-upper-left {
+    float: left;
+}
+
+.contract-page-upper-column-content-form-container-upper-right {
+    float: right;
+}
+
+.contract-page-upper-column-content-form-container-upper-item {
+    display: block;
+    margin: 16% auto 0% auto;
+}
+
+.contract-page-upper-column-content-form-container-upper-item-key-container {
+    display: inline-block;
+    width: 63%;
+}
+
+.contract-page-upper-column-content-form-container-upper-item-value-container {
+    display: inline-block;
+    width: 37%;
+}
+
+.contract-page-upper-column-content-form-container-upper-item-value {
+    color: #c5c5c5;
+    float: left;
+    font-weight: bold;
+}
+
+.contract-page-upper-column-content-form-container-upper-item p {
+    display: inline-block;
+    font-size: 0.75em;
+}
+
+.contract-page-upper-column-content-form-container-upper-item-key {
+    float: left;
+    margin-left: 32px;
+    margin-top: 1.25%;
+}
+
+.contract-page-upper-column-content-form-container-lower {
+    overflow: hidden;
+    margin-top: 7%;
+}
+
+.contract-page-upper-column-content-form-container-lower-left,
+.contract-page-upper-column-content-form-container-lower-right {
+    width: 50%;
+}
+
+.contract-page-upper-column-content-form-container-lower-left {
+    float: left;
+}
+
+.contract-page-upper-column-content-form-container-lower-right {
+    float: right;
+}
+
+.contract-page-upper-column-content-form-container-lower-right-upper i,
+.contract-page-upper-column-content-form-container-lower-right-lower i,
+.contract-page-upper-column-content-form-container-lower-left i {
+    float: left;
+    font-size: 18px;
+    margin-left: 32px;
+}
+
+.contract-page-upper-column-content-form-container-lower-left p {
+    float: left;
+    font-size: 0.75em;
+    font-weight: bold;
+    margin-left: 12px;
+    padding-top: 2px;
+}
+
+.contract-page-upper-column-content-form-container-lower-right-upper {
+    display: block;
+}
+
+.contract-page-upper-column-content-form-container-lower-right-lower {
+    display: block;
+    margin-top: 5%;
+}
+
+.contract-page-upper-column-content-form-container-lower-right-upper p,
+.contract-page-upper-column-content-form-container-lower-right-lower p {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 1%;
+    padding-top: 1%;
+}
+
+#contract-page-upper-column-content-form-container-lower-left-top {
+    display: block;
+    margin-bottom: 6%;
+    width: 100%;
+}
+
+.contract-page-upper-column-content-form-container-lower-left-bottom-left,
+.contract-page-upper-column-content-form-container-lower-left-top-left {
+    float: left;
+    width: 63%;
+}
+
+.contract-page-upper-column-content-form-container-lower-left-bottom-right,
+.contract-page-upper-column-content-form-container-lower-left-top-right {
+    float: right;
+    width: 37%;
+}
+
+#contract-page-upper-column-content-form-container-lower-left-bottom {
+    display: block;
+    width: 100%;
+}
+
+.contract-page-upper-column-content-form-container-lower-left-bottom-right p,
+.contract-page-upper-column-content-form-container-lower-left-top-right p {
+    color: #c5c5c5;
+    margin-left: 0;
+}
+
+.contract-page-upper-column-content-form-container-lower-left-content {
+    display: block;
+    width: 100%;
+}
+
+.contract-page-upper-column-content-form-container-lower-left-content p {
+    color: #c5c5c5;
+    margin-left: 32px;
+    margin-top: 5px;
+}
+
+.contract-page-upper-column-content-form-container-lower-left-content p:hover {
+    color: #f90628;
+    cursor: pointer;
+    transition: color 0.35s;
+}
+
+.contract-page-upper-right-column-content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.contract-page-upper-right-column-content h4 {
+    font-size: 0.75em;
+    font-weight: bold;
+    margin: 13% auto 0 auto;
+    margin-left: 32px;
+    text-align: left;
+}
+
+.contract-page-upper-right-column-content p {
+    color: #c5c5c5;
+    font-size: 0.75em;
+    font-weight: bold;
+    margin: 10.5% auto;
+    margin-left: 32px;
+    text-align: left;
+    width: 75%;
+}
+
+.contract-page-upper-right-column-content p:hover {
+    color: #f90628;
+    cursor: pointer;
+    transition: color 0.45s;
+}
+
+.contract-page-upper-column-content-form-container-lower-left-top-left i,
+.contract-page-upper-column-content-form-container-lower-left-bottom-left i {
+    margin-left: 36px;
+}
+
+.contract-page-lower {
+    background-color: white;
+    margin-bottom: 5%;
+    min-height: 23vh;
+}

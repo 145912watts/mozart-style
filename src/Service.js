@@ -1,6 +1,8 @@
 import React from 'react';
 import Collapsible from 'react-collapsible';
 
+import "./Service.css"
+
 const collapsibleArrowOpenStyle = {
     transform: "rotate(180deg)"
 }

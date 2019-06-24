@@ -5,26 +5,26 @@ import './postReset.css';
 */
 import './Home.css';
 import './App.css';
-/*
+
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "./Header";
 import Homepage from "./Homepage";
 import Menu from "./Menu";
-*/
+
 import Contract from "./Contract";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // menuOpen: false,
-      // homeMode: true,
-      // contractMode: false
+      menuOpen: false,
+      homeMode: true,
+      contractMode: false
     }
-    // this.handleClick = this.handleClick.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  render() {
+  /*render() {
     let centerColumnWidth;
     window.screen.width > 1024 ? centerColumnWidth = window.screen.width * 0.855 : centerColumnWidth = 1024;
     return (
@@ -34,8 +34,8 @@ class App extends React.Component {
         </div>
       </div>
     );
-  }
-  /*
+  }*/
+  
 
   handleClick(e) {
     if (
@@ -85,7 +85,7 @@ class App extends React.Component {
       </Router>
     );
   }
-  */
+  
 }
 
 export default App;

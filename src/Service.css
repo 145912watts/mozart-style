@@ -1,0 +1,152 @@
+.serviceContainer {
+    background-color: #ebebeb;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    position: relative;
+    width: 94.1%;
+}
+
+.serviceContainerHeaderColumn {
+    display: inline-block;
+    padding-bottom: 1.75%;
+    padding-top: 1.75%;
+    width: 20%;
+}
+
+.serviceContainerHeaderColumnKeyLeft,
+.serviceContainerHeaderColumnValueRight {
+    display: inline-block;
+    font-size: 12px;
+    width: 50%;
+}
+
+.serviceContainerHeaderColumnKeyLeft {
+    font-weight: bold;
+}
+
+.serviceContainerHeaderColumnValueRight {
+    color: #f90628;
+    font-weight: bold;
+    text-align: left;
+}
+
+#service-container-header-column-edit-icon {
+    cursor: pointer;
+    float: left;
+    font-size: 14px;
+    margin-top: 0.3%;
+    margin-left: -15%;
+}
+
+#service-container-header-column-edit-icon:hover {
+    color: #f90628;
+    transition: color 0.15s;
+}
+
+#service-container-header-column-down-arrow-icon {
+    cursor: pointer;
+    float: right;
+    font-size: 18px;
+    margin-right: 10%;
+}
+
+.serviceContainerDropdownPanel {
+    overflow: hidden;
+    width: 100%;
+}
+
+#serviceContainerHeaderColumnIcons {
+    margin-bottom: -30px;
+}
+
+.serviceContentContainer {
+    display:  none;
+    position: absolute;
+}
+
+.serviceContentCollapsible {
+    background-color: white;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 50px 0px;
+}
+
+.collapsibleContainerContentColumn {
+    display: inline-block;
+    width: 26%;
+}
+
+#collapsibleContainerContentColumnMiddle {
+    margin: 0 11%;
+}
+
+.collapsibleContainerContentColumnDivider {
+    display: inline-block;
+}
+
+#collapsibleContainerContentColumnDivider-left {
+    width: 65%;
+}
+
+#collapsibleContainerContentColumnDivider-right {
+    width: 35%;
+}
+
+.collapsibleContainerContentColumnDivider p {
+    text-align: left;
+}
+
+.serviceTableItem {
+    margin: 15% auto;
+}
+
+#getServiceTableItemDescriptionAttachment {
+    margin-left: 6.5%;
+}
+
+#getServiceTableItemDescriptionAttachment p {
+    display: block;
+    width: 100%;
+}
+
+#collapsibleContainerContentColumnDivider-left p {
+    font-size: 0.75em;
+    font-weight: bold;
+    margin-left: 11%;
+    text-transform: uppercase;
+}
+
+#collapsibleContainerContentColumnDivider-right p {
+    color: #f90628;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#collapsibleContainerContentColumnDivider-top {
+    width: 100%;
+}
+
+#collapsibleContainerContentColumnDivider-top p {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#collapsibleContainerContentColumnDivider-bottom {
+    width: 100%;
+}
+
+#collapsibleContainerContentColumnDivider-bottom p {
+    color: #f90628;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#collapsibleContainerContentColumnRight {
+    vertical-align: top;
+}
+
+#service-container-header-column-down-arrow-icon {
+    transition: 0.4s;
+}

@@ -3,6 +3,8 @@ import React from 'react';
 import Service from "./Service";
 import ContractOwnerPanel from "./ContractOwnerPanel";
 
+import "./Contract.css"
+
 const serviceDummyData = {
     attachments: ["Lorem-Ipsum-Dolor-Sit-Amet.Pdf"],
     brand: "Lorem Ipsum",
