@@ -61,6 +61,20 @@ class ContractOwnerPanel extends React.Component {
             listView: !this.state.listView,
         })
     }
+
+    getContractOwnerListItem() {
+        return (
+            <li className="contract-owner-list-item">
+                <div className="contract-owner-list-container-contract-details-container">
+                    <h5>Lorem Ipsum</h5>
+                    <p>Lorem Ipsum Dolor Sit Amet</p>
+                </div>
+                <div className="contract-owner-list-container-contract-image-container">
+                    <img alt="Profle" className="contract-page-upper-column-content-profile-image" id="contract-owner-list-image" src={profileImage}/>
+                </div>
+            </li>
+        );
+    }
  
     getListView(visible) {
         let listViewStyle;
@@ -69,74 +83,31 @@ class ContractOwnerPanel extends React.Component {
             listViewStyle = {
                 backgroundColor: "#2b2b2b",
                 height: "100%",
-                // opacity: "1",
                 overflow: "hidden",
                 width: "100%",
             }
         } else {
             listViewStyle = {
-                // display: "none",
                 marginTop: "800px",
-                // opacity: "0",
                 overflow: "hidden",
                 width: "0",
                 height: "0",
             }
         }
-/*
-        let listItemStyle;
 
-        if (visible) {
-
-        }
-*/
         return (
             <div className="contract-owner-list-container" style={listViewStyle}>
                 <ul>
-                    <li className="contract-owner-list-item">
-                        <div className="contract-owner-list-container-contract-details-container">
-                            <h5>Lorem Ipsum</h5>
-                            <p>Lorem Ipsum Dolor Sit Amet</p>
-                        </div>
-                        <div className="contract-owner-list-container-contract-image-container">
-                            <img alt="Profle" className="contract-page-upper-column-content-profile-image" id="contract-owner-list-image" src={profileImage}/>
-                        </div>
-                    </li>
-                    <li className="contract-owner-list-item">
-                        <div className="contract-owner-list-container-contract-details-container">
-                            <h5>Lorem Ipsum</h5>
-                            <p>Lorem Ipsum Dolor Sit Amet</p>
-                        </div>
-                        <div className="contract-owner-list-container-contract-image-container">
-                            <img alt="Profle" className="contract-page-upper-column-content-profile-image" id="contract-owner-list-image" src={profileImage}/>
-                        </div>
-                    </li>
-                    <li className="contract-owner-list-item">
-                        <div className="contract-owner-list-container-contract-details-container">
-                            <h5>Lorem Ipsum</h5>
-                            <p>Lorem Ipsum Dolor Sit Amet</p>
-                        </div>
-                        <div className="contract-owner-list-container-contract-image-container">
-                            <img alt="Profle" className="contract-page-upper-column-content-profile-image" id="contract-owner-list-image" src={profileImage}/>
-                        </div>
-                    </li>
-                    <li className="contract-owner-list-item">
-                        <div className="contract-owner-list-container-contract-details-container">
-                            <h5>Lorem Ipsum</h5>
-                            <p>Lorem Ipsum Dolor Sit Amet</p>
-                        </div>
-                        <div className="contract-owner-list-container-contract-image-container">
-                            <img alt="Profle" className="contract-page-upper-column-content-profile-image" id="contract-owner-list-image" src={profileImage}/>
-                        </div>
-                    </li>
+                    {this.getContractOwnerListItem()}
+                    {this.getContractOwnerListItem()}
+                    {this.getContractOwnerListItem()}
+                    {this.getContractOwnerListItem()}
                 </ul>
             </div>
         );
     }
 
     getSliderView() {
-
-        //const contract1 = this.getIndividualContractOwnerInfo();
 
         const settings = {
             dots: false,
@@ -184,7 +155,6 @@ class ContractOwnerPanel extends React.Component {
     }
 
     handleClick(e) {
-        console.log(e.target.className);
         if (e.target.id !== "list-view-icon") {
             if (this.state.listView) {
                 this.setState({
@@ -192,23 +162,6 @@ class ContractOwnerPanel extends React.Component {
                 })
             }
         }
-/*
-        if (this.state.listView === true) {
-            if(
-                e.target.className === "contract-page-upper-column-content-profile-image"
-                ||
-                e.target.className === "contract-owner-list-item"
-                ||
-                e.target.className === "contract-owner-list-container-contract-image-container"
-            ) {
-                return null;
-            } else {
-                this.setState({
-                    listView: !this.state.listView,
-                })
-            }
-        }
-        */
     }
 
     componentDidMount() {

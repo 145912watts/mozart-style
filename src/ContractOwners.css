@@ -1,9 +1,6 @@
 #contract-page-upper-column-left {
-    vertical-align: top;
-}
-
-#contract-page-upper-column-left {
     background-color: #f90628;
+    vertical-align: top;
     width: 18%;
 }
 
@@ -73,9 +70,6 @@
     height: inherit;
     overflow: hidden;
     width: inherit;
-}
-
-.contract-owner-list-container {
     transition: margin 0.75s;
 }
 
@@ -87,7 +81,6 @@
 }
 
 .contract-owner-list-container ul li {
-    /*background-color: white;*/
     cursor: pointer;
     height: 17%;
     list-style: none;
@@ -136,7 +129,6 @@
 }
 
 #contract-page-upper-column-header-left {
-    /*background-color: #f90628;*/
     background-color: #2b2b2b;
 }
 
@@ -150,6 +142,10 @@
     color: #f90628;
     transition: color 0.15s;
 };
+
+.slick-slide img {
+    display: inline;
+}
 
 .slick-dots {
     margin-bottom: -6px;

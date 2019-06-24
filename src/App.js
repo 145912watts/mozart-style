@@ -60,10 +60,6 @@ class App extends React.Component {
     let centerColumnWidth;
     window.screen.width > 1024 ? centerColumnWidth = window.screen.width * 0.855 : centerColumnWidth = 1024;
     
-    console.log(centerColumnWidth);
-
-    
-
     return (
       <Router>
         <div className="App">

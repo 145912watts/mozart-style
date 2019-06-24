@@ -4,11 +4,7 @@ import Collapsible from 'react-collapsible';
 const collapsibleArrowOpenStyle = {
     transform: "rotate(180deg)"
 }
-/*
-const collapsibleArrowClosedStyle = {
 
-}
-*/
 class Service extends React.Component {
 
     constructor(props) {
@@ -49,17 +45,11 @@ class Service extends React.Component {
         );
     }
 
-
-
     getServiceContainerHeader() {
-
-        console.log(this.state.open);
 
         let arrowStyle;
 
         this.state.open ? arrowStyle = collapsibleArrowOpenStyle : arrowStyle = null;
-
-
 
         return(
             <div className="serviceContainerHeader">
@@ -96,7 +86,6 @@ class Service extends React.Component {
     }
 
     getServiceCollapsibleContent() {
-        console.log(this.props);
         return(
             <div className="collapsibleContainerContent">
                 <div className="collapsibleContainerContentColumn" id="collapsibleContainerContentColumnLeft">
@@ -131,7 +120,6 @@ class Service extends React.Component {
     }
 
     render() {
-        console.log(this.state.open);
        return (
             <Collapsible className="serviceContainer" contentOuterClassName="serviceContentCollapsible" openedClassName="serviceContainer" transitionTime={300} trigger={this.getServiceContainerHeader()} onClosing={this.handleClick} onOpening={this.handleClick}>
                 {this.getServiceCollapsibleContent()}

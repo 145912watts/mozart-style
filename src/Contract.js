@@ -1,7 +1,5 @@
 import React from 'react';
 
-import "./ContractTEST.css"
-
 import Service from "./Service";
 import ContractOwnerPanel from "./ContractOwnerPanel";
 
@@ -24,10 +22,6 @@ const serviceDummyData = {
 }
 
 class Contract extends React.Component {
-
-    getContractUpperLeftColumn() {
-        return <ContractOwnerPanel />
-    };
 
     getContractUpperMiddleColumn() {
         return (
@@ -149,25 +143,14 @@ class Contract extends React.Component {
             "one",
             "two"
         ];
-
-        /*return (
-            <div className="App-body">
-                <div className="contract-page">
-                    <div className="contract-page-upper">
-                            {this.getContractUpperLeftColumn()}
-                            {this.getContractUpperMiddleColumn()}
-                    </div>
-                </div>
-            </div>
-        );*/
         
         return (
             <div className="App-body">
                 <div className="contract-page">
                     <div className="contract-page-upper" style={{height: contractPageUpperHeight}}>
-                            {this.getContractUpperLeftColumn()}
-                            {this.getContractUpperMiddleColumn()}
-                            {this.getContractUpperRightColumn()}
+                        <ContractOwnerPanel />
+                        {this.getContractUpperMiddleColumn()}
+                        {this.getContractUpperRightColumn()}
                     </div>
                     <div className="contract-page-lower">
                         {services.map((item, i) => <Service data={serviceDummyData} key={i}/>)}
@@ -179,12 +162,3 @@ class Contract extends React.Component {
 }
 
 export default Contract; 
-
-/*
-
-                        <div className="contract-page-upper-column-container">
-                            {this.getContractUpperLeftColumn()}
-                            {this.getContractUpperMiddleColumn()}
-                            {this.getContractUpperRightColumn()}
-                        </div>
-*/

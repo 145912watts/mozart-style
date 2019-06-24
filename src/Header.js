@@ -5,16 +5,18 @@ import mozartLogo from "./images/mozart-logo.png";
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-const menuOpenLogoStlye = {
-    opacity: "0",
-}
 
-const menuClosedLogoStyle = {
-    opacity: "0.4",
-}
 
 class Header extends React.Component {
     render() {
+        const menuOpenLogoStlye = {
+            opacity: "0",
+        };
+        
+        const menuClosedLogoStyle = {
+            opacity: "0.4",
+        };
+        
         let logoStyle;
 
         if (this.props.menuOpen) {
@@ -36,9 +38,9 @@ class Header extends React.Component {
                 <div className="headerSpanDivider"></div>
                 <div className="menu-logo-search-span">
                     <div className="menu-logo-search-span-column" id="menu-logo-search-span-column-left">
-                    <i className="material-icons" id="menu-logo-search-span-column-left-burger">
-                        menu
-                    </i>
+                        <i className="material-icons" id="menu-logo-search-span-column-left-burger">
+                            menu
+                        </i>
                     </div>
                     <div className="menu-logo-search-span-column" id="menu-logo-search-span-column-middle">
                         <div className="menu-logo-search-span-column-middle-container" id="menu-logo-search-span-column-mozart-logo-container">
@@ -53,7 +55,7 @@ class Header extends React.Component {
                     <div className="menu-logo-search-span-column" id="menu-logo-search-span-column-right">
                         <div className="menu-logo-search-span-column-right-search-icon-container">
                             <i className="material-icons" id="menu-logo-search-span-column-right-search">
-                            search
+                                search
                             </i>
                         </div>
                     </div>

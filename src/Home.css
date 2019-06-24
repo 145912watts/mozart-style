@@ -528,7 +528,6 @@ tr {
     /*width: 18%;*/
     z-index: 5000;
     transition: width 0.06s cubic-bezier(0.075, 0.82, 0.165, 1);
-    /*transition: width 1.06s cubic-bezier(0.075, 0.82, 0.165, 1);*/
 }
 
 .menuContainer-close-icon-container {
@@ -623,11 +622,6 @@ tr {
     vertical-align: top;
 }
 
-#contract-page-upper-column-left {
-    background-color: #f90628;
-    width: 18%;
-}
-
 #contract-page-upper-column-middle {
     background-color: white;
     margin-left: 3.5%;
@@ -657,10 +651,6 @@ tr {
     margin-top: 32px;
 }
 
-#contract-page-upper-column-header-left h4 {
-    color: white;
-}
-
 .contract-page-upper-column-header h5 {
     float: left;
     font-size: 0.57em;
@@ -682,11 +672,6 @@ tr {
 .contract-page-upper-column-header i:hover {
     color: #f90628;
     transition: color 0.15s;
-}
-
-#contract-page-upper-column-header-left {
-    /*background-color: #f90628;*/
-    background-color: #2b2b2b;
 }
 
 .contract-page-upper-column-content-form-container-upper {
@@ -870,71 +855,11 @@ tr {
     transition: color 0.45s;
 }
 
-.contract-page-upper-column-left-info p {
-    color: white;
-    font-size: 0.75em;
-    font-weight: bold;
-    margin-left: 14%;
-    text-align: left;
-}
-
-.contract-page-upper-column-left-info-top-name {
-    margin-bottom: 8%;
-    margin-top: 10%;
-}
-
-#contract-page-upper-column-content-image-edit {
-    cursor: pointer;
-    font-size: 16px;
-    margin-left: -14px;
-}
-
-#contract-page-upper-column-content-image-edit:hover {
-    color: #ebebeb;
-    transition: color 0.15s;
-}
-
 .contract-page-upper-column-content-form-container-lower-left-top-left i,
 .contract-page-upper-column-content-form-container-lower-left-bottom-left i {
     margin-left: 36px;
 }
 
-#contract-page-upper-column-left-info-bottom {
-    margin-top: 10%;
-}
-
-.contract-page-upper-column-left-info-bottom-dates {
-    display: inline-block;
-    overflow: hidden;
-    width: 50%;
-}
-
-.contract-page-upper-column-left-info-bottom-dates i {
-    display: block;
-    font-size: 18px;
-    margin-bottom: 6px;
-    margin-left: 27%;
-    width: fit-content;
-}
-
-.contract-page-upper-column-left-info-bottom-dates p {
-    color: #242424;
-    display: block;
-    font-size: 9px;
-    margin-left: 28%;
-}
-
-#contract-page-upper-column-left-info-bottom-dates-right p,
-#contract-page-upper-column-left-info-bottom-dates-right i {
-    margin-left: 0px;
-}
-/*
-.contract-page-lower {
-    background-image: linear-gradient(45deg, #f90628 25%, #2b2b2b 25%, #2b2b2b 50%, #f90628 50%, #f90628 75%, #2b2b2b 75%, #2b2b2b 100%);
-    background-size: 56.57px 56.57px;
-    height: 67vh;
-}
-*/
 .contract-page-lower {
     background-color: white;
     margin-bottom: 5%;
@@ -974,10 +899,6 @@ tr {
     text-align: left;
 }
 
-.serviceContainerHeaderTitlesContainer {
-    /*padding-top: 2%;*/
-}
-
 #service-container-header-column-edit-icon {
     cursor: pointer;
     float: left;
@@ -995,7 +916,6 @@ tr {
     cursor: pointer;
     float: right;
     font-size: 18px;
-    /*margin-bottom: -1.25%;*/
     margin-right: 10%;
 }
 
@@ -1097,78 +1017,4 @@ tr {
 
 #service-container-header-column-down-arrow-icon {
     transition: 0.4s;
-}
-
-
-
-
-
-
-.slick-slide img {
-    display: inline;
-}
-
-.slick-dots {
-    margin-bottom: -6px;
-}
-
-.slick-arrow {
-    margin-top: 93%;
-    z-index: 100;
-}
-
-.slick-prev {
-    left: 8px;
-}
-
-.slick-next {
-    right: 8px;
-}
-
-.slick-prev:before,
-.slick-next:before {
-  color: #2b2b2b;
-  font-size: 16px;
-  opacity: 1;
-}
-
-#contract-page-upper-column-header-left i {
-    color: white;
-    font-size: 1.4em;
-    margin-top: 11%;
-}
-
-#contract-page-upper-column-header-left i:hover {
-    color: #f90628;
-    transition: color 0.15s;
-};
-
-.contract-owner-list-container {
-    background-color: lightblue;
-    height: inherit;
-    overflow: hidden;
-    width: inherit;
-}
-
-.contract-owner-list-container {
-    transition: margin 0.75s;
-}
-
-.contract-owner-list-container ul {
-    height: 100%;
-    margin-top: 10%;
-    padding: 0;
-    width: 100%;
-}
-/*
-.contract-owner-list-container ul li {
-    background-color: white;
-    margin-top: 5px;
-    height: 17%;
-    list-style: none;
-    padding: 0;
-}
-*/
-.sliderStyle {
-    transition: margin 0.75s;
 }
