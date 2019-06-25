@@ -9,6 +9,10 @@ import profileImage1 from "./images/profile-images/profile-image-placeholder1.pn
 import profileImage2 from "./images/profile-images/profile-image-placeholder2.png";
 import profileImage3 from "./images/profile-images/profile-image-placeholder3.png";
 import profileImage4 from "./images/profile-images/profile-image-placeholder4.png";
+import profileImage5 from "./images/profile-images/profile-image-placeholder5.jpg";
+import profileImage6 from "./images/profile-images/profile-image-placeholder6.jpg";
+import profileImage7 from "./images/profile-images/profile-image-placeholder7.jpg";
+import profileImage8 from "./images/profile-images/profile-image-placeholder8.jpg";
 
 const serviceDummyData = {
     attachments: ["Lorem-Ipsum-Dolor-Sit-Amet.Pdf"],
@@ -41,7 +45,7 @@ const contractOwnerPanelListDummyData = [
         dateCreated: "00/00/00",
         dateModified: "00/00/00",
         id: "2",
-        image: profileImage2,
+        image: profileImage6,
         name: "Lorem Ipsum",
         title: "Lorem Ipsum Dolor Sit Amet",
     },
@@ -49,7 +53,7 @@ const contractOwnerPanelListDummyData = [
         dateCreated: "00/00/00",
         dateModified: "00/00/00",
         id: "3",
-        image: profileImage3,
+        image: profileImage7,
         name: "Lorem Ipsum",
         title: "Lorem Ipsum Dolor Sit Amet",
     },
@@ -57,7 +61,39 @@ const contractOwnerPanelListDummyData = [
         dateCreated: "00/00/00",
         dateModified: "00/00/00",
         id: "4",
+        image: profileImage8,
+        name: "Lorem Ipsum",
+        title: "Lorem Ipsum Dolor Sit Amet",
+    },
+    {
+        dateCreated: "00/00/00",
+        dateModified: "00/00/00",
+        id: "5",
+        image: profileImage5,
+        name: "Lorem Ipsum",
+        title: "Lorem Ipsum Dolor Sit Amet",
+    },
+    {
+        dateCreated: "00/00/00",
+        dateModified: "00/00/00",
+        id: "6",
         image: profileImage4,
+        name: "Lorem Ipsum",
+        title: "Lorem Ipsum Dolor Sit Amet",
+    },
+    {
+        dateCreated: "00/00/00",
+        dateModified: "00/00/00",
+        id: "7",
+        image: profileImage1,
+        name: "Lorem Ipsum",
+        title: "Lorem Ipsum Dolor Sit Amet",
+    },
+    {
+        dateCreated: "00/00/00",
+        dateModified: "00/00/00",
+        id: "8",
+        image: profileImage2,
         name: "Lorem Ipsum",
         title: "Lorem Ipsum Dolor Sit Amet",
     },

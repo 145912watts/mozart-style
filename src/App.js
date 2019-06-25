@@ -17,11 +17,11 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      /*
-      menuOpen: false,
-      homeMode: true,
-      contractMode: false
-      */
+      
+      // menuOpen: false,
+      // homeMode: true,
+      // contractMode: false
+      
     }
     // this.handleClick = this.handleClick.bind(this);
   }
@@ -38,7 +38,6 @@ class App extends React.Component {
       </div>
     );
   }
-  
 
   /*
   handleClick(e) {

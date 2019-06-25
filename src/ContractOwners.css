@@ -74,18 +74,23 @@
 }
 
 .contract-owner-list-container ul {
-    height: 100%;
+    height: 87.5%;
     margin-top: 10%;
+    overflow-y: scroll;
     padding: 0;
     width: 100%;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+}
+
 .contract-owner-list-container ul li {
     cursor: pointer;
-    height: 17%;
+    height: 24%;
     list-style: none;
-    margin-bottom: 7%;
-    margin-top: 5px;
+    /*margin-bottom: 7%;
+    margin-top: 5px;*/
     overflow: hidden;
     padding: 0;
     transition: background-color 0.4s;
@@ -120,7 +125,7 @@
     float: right;
     margin-bottom: -35%;
     margin-right: 15.5%;
-    margin-top: 2.5%;
+    margin-top: 6.5%;
     width: 55%;
 }
 
@@ -186,5 +191,9 @@
 }
 
 .contract-owner-list-container ul li div {
-    margin-top: 2.5%;
+    margin-top: 4.5%;
+}
+
+.contract-owner-list-container ul li:nth-child(4) {
+    height: 26.5%;
 }
