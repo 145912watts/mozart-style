@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class Menu extends React.Component {
     render() {
@@ -64,6 +64,50 @@ class Menu extends React.Component {
                 <div className="navContainer" style={navContainerStyle}>
                     <ul className="navList" style={navListStyle}>
                         <li style={navListLiStyle}>
+                            <i className="material-icons">
+                                home
+                            </i>
+                            <p>HOME</p>
+                        </li>
+                        <li style={navListLiStyle}>
+                            <i className="material-icons">
+                                note_add
+                            </i>
+                            <p>CREATE CONTACT</p>
+                        </li>
+                        <li style={navListLiStyle}>
+                            <i className="material-icons">
+                                compare_arrows
+                            </i>
+                            <p>IMPORT</p>
+                        </li>
+                        <li style={navListLiStyle}>
+                            <i className="material-icons">
+                                create_new_folder
+                            </i>
+                            <p>CREATE REPORT</p>
+                        </li>
+                        <li style={navListLiStyle}>
+                            <i className="material-icons">
+                                help
+                            </i>
+                            <p>HELP CENTRE</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        );
+/*
+        return (
+            <div className="menuContainer" style={menuContainerStyle}>
+                <div className="menuContainer-close-icon-container" style={menuContainerCloseIconContainerStyle}>
+                    <i className="material-icons" id="menuContainer-close-icon">
+                        close
+                    </i>
+                </div>
+                <div className="navContainer" style={navContainerStyle}>
+                    <ul className="navList" style={navListStyle}>
+                        <li style={navListLiStyle}>
                             <Link to="/">
                                 <i className="material-icons">
                                     home
@@ -99,6 +143,7 @@ class Menu extends React.Component {
                 </div>
             </div>
         );
+        */
     }
 }
 

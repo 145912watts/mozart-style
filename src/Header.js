@@ -24,7 +24,7 @@ class Header extends React.Component {
         } else {
             logoStyle = menuClosedLogoStyle;
         }
-
+/*
         return (
             <header className="App-header">
                 <div className="header-logo-span">
@@ -60,8 +60,8 @@ class Header extends React.Component {
                 </div>
             </header>
         );
-
-        /*
+*/
+        
         return (
             <header className="App-header">
                 <div className="header-logo-span">
@@ -81,9 +81,7 @@ class Header extends React.Component {
                     </div>
                     <div className="menu-logo-search-span-column" id="menu-logo-search-span-column-middle">
                         <div className="menu-logo-search-span-column-middle-container" id="menu-logo-search-span-column-mozart-logo-container">
-                            <Link to="/">
-                                <img alt="mozart-logo" src={mozartLogo} />
-                            </Link>
+                            <img alt="mozart-logo" src={mozartLogo} />
                         </div>
                         <div className="menu-logo-search-span-column-middle-container" id="menu-logo-search-span-column-hero-message-container">
                             <h3>Upload signed contracts, capture key contractual terms & monitor and track service delivery</h3>
@@ -99,7 +97,6 @@ class Header extends React.Component {
                 </div>
             </header>
         );
-        */
     }
 }
 

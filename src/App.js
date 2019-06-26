@@ -6,10 +6,10 @@ import './postReset.css';
 import './Home.css';
 import './App.css';
 
-// import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "./Header";
 // import Homepage from "./Homepage";
-// import Menu from "./Menu";
+import Menu from "./Menu";
 // import Contract from "./Contract";
 
 class App extends React.Component {
@@ -22,12 +22,12 @@ class App extends React.Component {
       contractMode: false
       
     }
-    // this.handleClick = this.handleClick.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
-// Contract only
 
 /*
+// Contract only
   render() {
     let centerColumnWidth;
     window.screen.width > 1024 ? centerColumnWidth = window.screen.width * 0.855 : centerColumnWidth = 1024;
@@ -40,9 +40,8 @@ class App extends React.Component {
     );
   }
 */
-
+/*
 // Header only
-
   render() {
     let centerColumnWidth;
     window.screen.width > 1024 ? centerColumnWidth = window.screen.width * 0.855 : centerColumnWidth = 1024;
@@ -56,8 +55,54 @@ class App extends React.Component {
       </div>
     );
   }
+*/
 
+// Header and Menu Only
+handleClick(e) {
+    if (
+      e.target.id === "menu-logo-search-span-column-left-burger"
+      ||
+      e.target.id === "menuContainer-close-icon"
+    ) {
+      this.setState({
+        menuOpen: !this.state.menuOpen
+      })
+    } else {
+      if(this.state.menuOpen) {
+        this.setState({
+          menuOpen: false
+        })
+      }
+    }
+  }
 
+  componentDidMount() {
+    window.addEventListener('click', this.handleClick);
+  }
+  
+  componentWillUnmount() {
+    window.removeEventListener('click', this.handleClick);
+  }
+
+  render() {
+    let centerColumnWidth;
+    window.screen.width > 1024 ? centerColumnWidth = window.screen.width * 0.855 : centerColumnWidth = 1024;
+    
+    return (
+      <div className="App">
+        <div className="App-Center-Column" style={{width: centerColumnWidth}}>
+          <Menu
+            centerColumnWidth={centerColumnWidth}
+            open={this.state.menuOpen}
+          />
+          <Header 
+            menuOpen={this.state.menuOpen}
+          />
+        </div>
+      </div>
+    );
+  } 
+}
 /*
   handleClick(e) {
     if (
@@ -107,7 +152,6 @@ class App extends React.Component {
       </Router>
     );
   } 
-  */
 }
-
+*/
 export default App;
