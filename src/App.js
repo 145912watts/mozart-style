@@ -6,11 +6,11 @@ import './postReset.css';
 import './Home.css';
 import './App.css';
 
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Header from "./Header";
+// import { BrowserRouter as Router, Route } from "react-router-dom";
+// import Header from "./Header";
 // import Homepage from "./Homepage";
-import Menu from "./Menu";
-// import Contract from "./Contract";
+// import Menu from "./Menu";
+import Contract from "./Contract";
 
 class App extends React.Component {
   constructor(props) {
@@ -22,11 +22,9 @@ class App extends React.Component {
       contractMode: false
       
     }
-    this.handleClick = this.handleClick.bind(this);
+    // this.handleClick = this.handleClick.bind(this);
   }
 
-
-/*
 // Contract only
   render() {
     let centerColumnWidth;
@@ -39,7 +37,7 @@ class App extends React.Component {
       </div>
     );
   }
-*/
+
 /*
 // Header only
   render() {
@@ -56,7 +54,7 @@ class App extends React.Component {
     );
   }
 */
-
+/*
 // Header and Menu Only
 handleClick(e) {
     if (
@@ -103,6 +101,7 @@ handleClick(e) {
     );
   } 
 }
+*/
 /*
   handleClick(e) {
     if (
@@ -152,6 +151,6 @@ handleClick(e) {
       </Router>
     );
   } 
-}
 */
+}
 export default App;
