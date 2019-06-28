@@ -20,11 +20,9 @@ class Homepage extends React.Component {
                     <i className="material-icons">
                         add
                     </i>
-                    <Link to="/contract">
-                        <i className="material-icons" id="table-item-view-contract">
-                            remove_red_eye
-                        </i>
-                    </Link>
+                    <i className="material-icons" id="table-item-view-contract">
+                        remove_red_eye
+                    </i>
                     <i className="material-icons">
                         settings
                     </i>

@@ -8,9 +8,9 @@ import './App.css';
 
 // import { BrowserRouter as Router, Route } from "react-router-dom";
 // import Header from "./Header";
-// import Homepage from "./Homepage";
+import Homepage from "./Homepage";
 // import Menu from "./Menu";
-import Contract from "./Contract";
+// import Contract from "./Contract";
 
 class App extends React.Component {
   constructor(props) {
@@ -24,7 +24,7 @@ class App extends React.Component {
     }
     // this.handleClick = this.handleClick.bind(this);
   }
-
+/*
 // Contract only
   render() {
     let centerColumnWidth;
@@ -37,7 +37,7 @@ class App extends React.Component {
       </div>
     );
   }
-
+*/
 /*
 // Header only
   render() {
@@ -54,6 +54,22 @@ class App extends React.Component {
     );
   }
 */
+// Homepage Only
+
+
+render() {
+  let centerColumnWidth;
+  window.screen.width > 1024 ? centerColumnWidth = window.screen.width * 0.855 : centerColumnWidth = 1024;
+  
+  return (
+      <div className="App">
+        <div className="App-Center-Column" style={{width: centerColumnWidth}}>
+          <Homepage />
+        </div>
+      </div>
+  );
+} 
+
 /*
 // Header and Menu Only
 handleClick(e) {
